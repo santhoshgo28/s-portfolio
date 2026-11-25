@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Santhosh — AI/ML Engineer & Freelance Web Developer | Bengaluru</title>
+  <meta name="description" content="Santhosh is an AI/ML Engineer and Python Developer in Bengaluru building premium websites, AI/ML solutions and AI-powered automation for students, businesses and companies." />
+  <meta property="og:title" content="Santhosh — Websites, AI/ML & Automation" />
+  <meta property="og:description" content="Premium websites, AI/ML systems and intelligent automation. Based in BTM 2nd Stage, Bengaluru." />
+  <meta name="theme-color" content="#08080b" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;1,9..144,300;1,9..144,500&family=Manrope:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <script>
+    (function () {
+      var t = null;
+      try { t = localStorage.getItem('theme'); } catch (e) {}
+      if (!t) t = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', t);
+    })();
+  </script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="loader" id="loader" aria-hidden="true">
+    <div class="loader-inner">
+      <div class="loader-name"><span>S</span><span>a</span><span>n</span><span>t</span><span>h</span><span>o</span><span>s</span><span>h</span></div>
+      <div class="loader-sub">AI/ML · Web · Automation</div>
+      <div class="loader-bar"><i id="loaderBar"></i></div>
+      <div class="loader-count" id="loaderCount">0</div>
+    </div>
+  </div>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="cursor-glow" aria-hidden="true"></div>
+  <div class="cursor-dot" aria-hidden="true"></div>
+  <div class="cursor-ring" aria-hidden="true"><span>View</span></div>
+  <div class="progress" aria-hidden="true"><i id="progress"></i></div>
+
+  <!-- ============ NAV ============ -->
+  <header class="nav" id="nav">
+    <a href="#top" class="brand">
+      <span class="brand-mark">S</span>
+      <span class="brand-name">Santhosh<span class="dot">.</span></span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#services">Services</a>
+      <a href="#work">What I Build</a>
+      <a href="#process">Process</a>
+      <a href="#about">About</a>
+      <a href="#contact" class="nav-cta">Let's Talk</a>
+    </nav>
+    <div class="nav-right">
+      <button class="theme-toggle" id="themeToggle" aria-label="Switch to light mode" title="Switch light / dark mode">
+        <svg class="moon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M20.5 14.2A8.5 8.5 0 0 1 9.8 3.5a8.5 8.5 0 1 0 10.7 10.7z" fill="currentColor"/>
+          <circle class="star s1" cx="17" cy="5" r="1"/><circle class="star s2" cx="20.5" cy="9" r="0.7"/><circle class="star s3" cx="14" cy="2.6" r="0.6"/>
+        </svg>
+        <svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="4.2" fill="currentColor" stroke="none"/>
+          <path d="M12 2v2.2M12 19.8V22M2 12h2.2M19.8 12H22M4.9 4.9l1.6 1.6M17.5 17.5l1.6 1.6M4.9 19.1l1.6-1.6M17.5 6.5l1.6-1.6"/>
+        </svg>
+      </button>
+      <button class="menu-btn" id="menuBtn" aria-label="Open menu"><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- ============ HERO ============ -->
+    <section class="hero">
+      <canvas class="neural" id="neural" aria-hidden="true"></canvas>
+      <div class="hero-orb orb-1" aria-hidden="true"></div>
+      <div class="hero-orb orb-2" aria-hidden="true"></div>
+
+      <div class="hero-inner">
+        <p class="eyebrow reveal"><span class="pulse"></span> Available for freelance projects · Bengaluru</p>
+        <h1 class="hero-title" id="heroTitle">
+          <span class="line"><span class="w"><span>I</span></span> <span class="w"><span>build</span></span> <span class="w"><span>websites</span></span></span>
+          <span class="line"><span class="w"><span>that</span></span> <span class="w"><span><em>think</em>,</span></span> <span class="w"><span>and</span></span></span>
+          <span class="line"><span class="w"><span>systems</span></span> <span class="w"><span>that</span></span> <span class="w"><span><em class="gold">work</em></span></span> <span class="w"><span>for</span></span> <span class="w"><span>you.</span></span></span>
+        </h1>
+        <p class="hero-sub reveal">
+          I'm <strong>Santhosh</strong> — an AI/ML Engineer & Python Developer. I design and develop
+          complete websites, intelligent AI/ML solutions and AI-powered automation for students,
+          startups, businesses and companies.
+        </p>
+        <div class="hero-actions reveal">
+          <a href="https://wa.me/918951068599?text=Hi%20Santhosh%2C%20I%27d%20like%20to%20discuss%20a%20project." target="_blank" rel="noopener" class="btn btn-gold magnetic">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.5-2.4-1.5-.9-.8-1.5-1.8-1.6-2.1-.2-.3 0-.5.1-.6l.4-.5c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3zM12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2z"/></svg>
+            Start on WhatsApp
+          </a>
+          <a href="#services" class="btn btn-ghost magnetic">Explore Services <span class="arrow">→</span></a>
+        </div>
+
+        <div class="hero-meta reveal">
+          <div><span class="meta-k">Role</span><span class="meta-v">AI/ML Engineer</span></div>
+          <div><span class="meta-k">Stack</span><span class="meta-v">Python · JS · ML</span></div>
+          <div><span class="meta-k">Base</span><span class="meta-v">BTM 2nd Stage, BLR</span></div>
+        </div>
+      </div>
+
+      <!-- Floating code card -->
+      <div class="code-card reveal" aria-hidden="true">
+        <div class="code-head"><i></i><i></i><i></i><span>santhosh.py</span></div>
+<pre><code><span class="k">class</span> <span class="f">Santhosh</span>:
+    role   = <span class="s">"AI/ML Engineer"</span>
+    skills = [<span class="s">"Python"</span>, <span class="s">"ML"</span>, <span class="s">"Web"</span>]
+
+    <span class="k">def</span> <span class="f">build</span>(self, idea):
+        site  = self.design(idea)
+        brain = self.train_model(idea)
+        <span class="k">return</span> self.automate(site, brain)
+
+<span class="c"># → your business, upgraded ✦</span></code></pre>
+      </div>
+
+      <a href="#contact" class="round-badge" aria-label="Hire me">
+        <svg viewBox="0 0 200 200"><defs><path id="circ" d="M100,100 m-78,0 a78,78 0 1,1 156,0 a78,78 0 1,1 -156,0"/></defs>
+          <text><textPath href="#circ" textLength="486" lengthAdjust="spacing">AVAILABLE FOR WORK ✦ AI · ML · WEB ✦ </textPath></text></svg>
+        <span>↗</span>
+      </a>
+      <a href="#marquee" class="scroll-hint" aria-label="Scroll down"><span></span></a>
+    </section>
+
+    <!-- ============ MARQUEE ============ -->
+    <section class="marquee" id="marquee" aria-label="Technologies">
+      <div class="marquee-track">
+        <span>Python</span><i>✦</i><span>TensorFlow</span><i>✦</i><span>PyTorch</span><i>✦</i><span>Scikit-learn</span><i>✦</i>
+        <span>OpenAI / LLMs</span><i>✦</i><span>LangChain</span><i>✦</i><span>FastAPI</span><i>✦</i><span>Django</span><i>✦</i>
+        <span>JavaScript</span><i>✦</i><span>React</span><i>✦</i><span>Vite</span><i>✦</i><span>HTML5 & CSS3</span><i>✦</i>
+        <span>OpenCV</span><i>✦</i><span>Pandas</span><i>✦</i><span>Selenium</span><i>✦</i><span>n8n · Zapier</span><i>✦</i>
+        <span>Python</span><i>✦</i><span>TensorFlow</span><i>✦</i><span>PyTorch</span><i>✦</i><span>Scikit-learn</span><i>✦</i>
+        <span>OpenAI / LLMs</span><i>✦</i><span>LangChain</span><i>✦</i><span>FastAPI</span><i>✦</i><span>Django</span><i>✦</i>
+        <span>JavaScript</span><i>✦</i><span>React</span><i>✦</i><span>Vite</span><i>✦</i><span>HTML5 & CSS3</span><i>✦</i>
+        <span>OpenCV</span><i>✦</i><span>Pandas</span><i>✦</i><span>Selenium</span><i>✦</i><span>n8n · Zapier</span><i>✦</i>
+      </div>
+    </section>
+
+    <!-- ============ MANIFESTO ============ -->
+    <section class="manifesto">
+      <p class="kicker">Philosophy</p>
+      <p class="manifesto-text" id="manifesto">Great websites aren't just beautiful. They load fast, speak clearly, win trust and quietly work for you around the clock. I combine design, engineering and artificial intelligence so that every project I deliver looks premium and thinks for itself.</p>
+    </section>
+
+    <!-- ============ SERVICES ============ -->
+    <section class="section" id="services">
+      <div class="section-head">
+        <p class="kicker reveal">01 — Services</p>
+        <h2 class="section-title reveal">Three crafts. <em>One</em> partner.</h2>
+        <p class="section-lead reveal">From the first pixel to the last line of model code — everything you need to go digital and go intelligent, under one roof.</p>
+      </div>
+
+      <div class="services">
+        <article class="service tilt reveal" data-cursor="Explore">
+          <div class="service-num">01</div>
+          <div class="service-icon">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="5" y="9" width="38" height="28" rx="3"/><path d="M5 16h38M17 43h14M24 37v6"/><path d="m19 24-4 3 4 3M29 24l4 3-4 3"/></svg>
+          </div>
+          <h3>Complete Website Development</h3>
+          <p>Fast, beautiful, responsive websites built end-to-end — design, development, hosting and launch.</p>
+          <ul>
+            <li>Student & personal portfolios</li>
+            <li>Business & shop websites</li>
+            <li>Corporate & company websites</li>
+            <li>Landing pages & e-commerce</li>
+            <li>Admin dashboards & web apps</li>
+          </ul>
+          <a href="#contact" class="service-link">Build my website <span>→</span></a>
+        </article>
+
+        <article class="service service-featured tilt reveal" data-cursor="Explore">
+          <div class="badge">Speciality</div>
+          <div class="service-num">02</div>
+          <div class="service-icon">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="24" cy="24" r="6"/><circle cx="10" cy="10" r="3"/><circle cx="38" cy="10" r="3"/><circle cx="10" cy="38" r="3"/><circle cx="38" cy="38" r="3"/><path d="m12.5 12.5 7 7M35.5 12.5l-7 7M12.5 35.5l7-7M35.5 35.5l-7-7"/></svg>
+          </div>
+          <h3>Complete AI / ML Solutions</h3>
+          <p>Custom machine-learning and AI systems — from data to deployed model, tailored to your problem.</p>
+          <ul>
+            <li>AI chatbots & LLM assistants (RAG)</li>
+            <li>Predictive models & analytics</li>
+            <li>Computer vision & image AI</li>
+            <li>NLP — text, sentiment, documents</li>
+            <li>ML projects for students & research</li>
+          </ul>
+          <a href="#contact" class="service-link">Bring AI to my idea <span>→</span></a>
+        </article>
+
+        <article class="service tilt reveal" data-cursor="Explore">
+          <div class="service-num">03</div>
+          <div class="service-icon">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M24 6v6M24 36v6M6 24h6M36 24h6M11.3 11.3l4.2 4.2M32.5 32.5l4.2 4.2M11.3 36.7l4.2-4.2M32.5 15.5l4.2-4.2"/><circle cx="24" cy="24" r="8"/><path d="m22 21 4 3-4 3z" fill="currentColor"/></svg>
+          </div>
+          <h3>AI-Powered Automation</h3>
+          <p>Let software do the repetitive work. Save hours every week with smart, reliable automation.</p>
+          <ul>
+            <li>Workflow & business process automation</li>
+            <li>WhatsApp, email & social bots</li>
+            <li>Web scraping & data pipelines</li>
+            <li>Excel / report / document automation</li>
+            <li>AI agents connected to your tools</li>
+          </ul>
+          <a href="#contact" class="service-link">Automate my work <span>→</span></a>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ WHAT I BUILD ============ -->
+    <section class="section section-alt" id="work">
+      <div class="section-head">
+        <p class="kicker reveal">02 — What I Build</p>
+        <h2 class="section-title reveal">Made for <em>everyone</em> with an idea.</h2>
+      </div>
+
+      <div class="bento">
+        <div class="tile tile-lg reveal">
+          <span class="tile-tag">For Students</span>
+          <h3>Portfolio websites that get you hired.</h3>
+          <p>Showcase your projects, resume and skills with a personal site recruiters remember. Plus guidance and builds for final-year AI/ML & Python projects.</p>
+          <div class="tile-visual pf">
+            <span></span><span></span><span></span>
+          </div>
+        </div>
+        <div class="tile reveal">
+          <span class="tile-tag">For Businesses</span>
+          <h3>Websites that bring customers.</h3>
+          <p>Shops, restaurants, clinics, salons, startups — look professional, get found on Google, take enquiries 24/7.</p>
+        </div>
+        <div class="tile reveal">
+          <span class="tile-tag">For Companies</span>
+          <h3>Corporate sites & web apps.</h3>
+          <p>Multi-page company websites, internal tools, dashboards and portals built to scale.</p>
+        </div>
+        <div class="tile tile-wide reveal">
+          <span class="tile-tag">AI Everywhere</span>
+          <h3>Add a brain to anything you already have.</h3>
+          <p>A chatbot on your website, an AI that reads your invoices, a model that forecasts your sales, a bot that replies to WhatsApp leads — I plug AI into real workflows.</p>
+          <div class="chips">
+            <span>Chatbots</span><span>Forecasting</span><span>OCR</span><span>Recommendation</span><span>Lead bots</span><span>Agents</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PROCESS ============ -->
+    <section class="section" id="process">
+      <div class="section-head">
+        <p class="kicker reveal">03 — Process</p>
+        <h2 class="section-title reveal">Simple steps. <em>Premium</em> results.</h2>
+      </div>
+      <ol class="process">
+        <li class="step reveal"><span class="step-n">01</span><h4>Discover</h4><p>We talk on call or WhatsApp. I understand your goal, audience and budget.</p></li>
+        <li class="step reveal"><span class="step-n">02</span><h4>Design</h4><p>A clear plan and a modern design direction you approve before any build.</p></li>
+        <li class="step reveal"><span class="step-n">03</span><h4>Develop</h4><p>Clean code, AI models and automations — with regular progress updates.</p></li>
+        <li class="step reveal"><span class="step-n">04</span><h4>Launch & Support</h4><p>Deployment, domain and hosting setup, plus support after go-live.</p></li>
+      </ol>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section class="section section-alt" id="about">
+      <div class="about">
+        <div class="about-left reveal">
+          <div class="avatar">
+            <span>S</span>
+            <div class="avatar-ring"></div>
+          </div>
+          <div class="now">
+            <span class="pulse"></span>
+            <div>
+              <small>Currently working as</small>
+              <strong>AI/ML Engineer & Python Developer</strong>
+            </div>
+          </div>
+        </div>
+        <div class="about-right">
+          <p class="kicker reveal">04 — About</p>
+          <h2 class="section-title reveal">Engineer by day. <em>Builder</em> always.</h2>
+          <p class="reveal">I'm Santhosh, an AI/ML Engineer and Python Developer based in Bengaluru. Every day I work on machine-learning models, data pipelines and Python systems — and as a freelancer I bring that same engineering depth to websites and automation for my clients.</p>
+          <p class="reveal">That means you don't just get a good-looking site. You get something fast, well-engineered and ready for AI — built by someone who understands both the design and the intelligence behind it.</p>
+          <div class="skills reveal">
+            <div class="skill"><span>Python & ML Engineering</span><div class="bar"><i style="--w:95%"></i></div></div>
+            <div class="skill"><span>AI · LLMs · Automation</span><div class="bar"><i style="--w:90%"></i></div></div>
+            <div class="skill"><span>Web Development (HTML · CSS · JS · Vite)</span><div class="bar"><i style="--w:88%"></i></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ WHY ============ -->
+    <section class="section why">
+      <div class="why-grid">
+        <div class="why-item reveal"><h5>One person, full stack</h5><p>Design, code, AI and deployment — no agency layers, direct communication.</p></div>
+        <div class="why-item reveal"><h5>Engineer-grade quality</h5><p>Clean, maintainable code you own completely, delivered on GitHub.</p></div>
+        <div class="why-item reveal"><h5>Fair, transparent pricing</h5><p>Clear quotes for students, small businesses and companies alike.</p></div>
+        <div class="why-item reveal"><h5>Local & reachable</h5><p>Based in BTM, Bengaluru — meet in person or talk on WhatsApp anytime.</p></div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="section contact" id="contact">
+      <div class="contact-wrap">
+        <div class="contact-left">
+          <p class="kicker reveal">05 — Contact</p>
+          <h2 class="contact-title reveal">Have an idea?<br/><em>Let's build it.</em></h2>
+          <p class="reveal">Tell me about your project — a website, an AI system or an automation. I usually reply within a few hours.</p>
+
+          <ul class="contact-list">
+            <li class="reveal">
+              <a href="mailto:santhoshdevaraj2003@gmail.com">
+                <span class="ci">✉</span>
+                <span><small>Email</small>santhoshdevaraj2003@gmail.com</span>
+              </a>
+              <button class="copy" data-copy="santhoshdevaraj2003@gmail.com" aria-label="Copy email">Copy</button>
+            </li>
+            <li class="reveal">
+              <a href="tel:+918951068599">
+                <span class="ci">☏</span>
+                <span><small>Phone</small>+91 89510 68599</span>
+              </a>
+              <button class="copy" data-copy="+918951068599" aria-label="Copy phone">Copy</button>
+            </li>
+            <li class="reveal">
+              <a href="https://wa.me/918951068599" target="_blank" rel="noopener">
+                <span class="ci">◐</span>
+                <span><small>WhatsApp</small>+91 89510 68599</span>
+              </a>
+            </li>
+            <li class="reveal">
+              <a href="https://www.instagram.com/_.santhoshgowdru28?cnvx=ZDIzeWFnemVraHk0" target="_blank" rel="noopener">
+                <span class="ci">◎</span>
+                <span><small>Instagram</small>@_.santhoshgowdru28</span>
+              </a>
+            </li>
+            <li class="reveal">
+              <a href="https://maps.google.com/?q=BTM+2nd+Stage+Bengaluru" target="_blank" rel="noopener">
+                <span class="ci">⌖</span>
+                <span><small>Location</small>BTM 2nd Stage, Bengaluru</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <form class="form reveal" id="contactForm" novalidate>
+          <h3>Send a project enquiry</h3>
+          <div class="field">
+            <input id="name" name="name" required placeholder=" " />
+            <label for="name">Your name</label>
+          </div>
+          <div class="field">
+            <input id="phone" name="phone" placeholder=" " />
+            <label for="phone">Phone / email (optional)</label>
+          </div>
+          <div class="field">
+            <select id="service" name="service" required>
+              <option value="Website Development">Website Development</option>
+              <option value="Student Portfolio Website">Student Portfolio Website</option>
+              <option value="Business / Company Website">Business / Company Website</option>
+              <option value="AI / ML Solution">AI / ML Solution</option>
+              <option value="AI Automation">AI Automation</option>
+              <option value="Other">Something else</option>
+            </select>
+            <label for="service" class="fixed">I'm interested in</label>
+          </div>
+          <div class="field">
+            <textarea id="message" name="message" rows="4" required placeholder=" "></textarea>
+            <label for="message">Tell me about your project</label>
+          </div>
+          <div class="form-actions">
+            <button type="submit" class="btn btn-gold" data-via="whatsapp">Send via WhatsApp</button>
+            <button type="submit" class="btn btn-ghost" data-via="email">Send via Email</button>
+          </div>
+          <p class="form-note" id="formNote"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-big">Santhosh<span class="dot">.</span></div>
+    <div class="footer-row">
+      <p>© <span id="year"></span> Santhosh · AI/ML Engineer & Freelance Developer · Bengaluru</p>
+      <div class="footer-links">
+        <a href="https://www.instagram.com/_.santhoshgowdru28?cnvx=ZDIzeWFnemVraHk0" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://wa.me/918951068599" target="_blank" rel="noopener">WhatsApp</a>
+        <a href="mailto:santhoshdevaraj2003@gmail.com">Email</a>
+        <a href="#top">Back to top ↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/918951068599" class="wa-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+    <svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.5-2.4-1.5-.9-.8-1.5-1.8-1.6-2.1-.2-.3 0-.5.1-.6l.4-.5c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.7-.7 2-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3zM12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2z"/></svg>
+  </a>
+
+  <div class="toast" id="toast">Copied!</div>
+
+  <script src="https://unpkg.com/lenis@1.3.28/dist/lenis.min.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
